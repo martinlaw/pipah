@@ -72,15 +72,69 @@ x6 <- singlearmDesign(nmin=24, nmax=40, C=8, p0=0.1, p1=0.27, alpha=0.05, power=
 x6
 drawDiagram(x6)
 
+############# from June ############
 
-des.jun <- singlearmDesign(nmin=17,
-                           nmax=36,
-                           stages=2:3,
-                           p0=0.1,
-                           p1=0.27,
+simon <- find2stageDesigns(nmin=6,
+                           nmax=16,
+                           p0=0.05,
+                           p1=0.3,
+                           alpha=0.05,
+                           power=0.8)
+
+clinfun::ph2simon(pu = 0.05, pa = 0.3, ep1 = 0.05, ep2 = 0.2, nmax = 30)
+
+n14 <- singlearmDesign(nmin=14,
+                           nmax=14,
+                           C=2,
+                           p0=0.05,
+                           p1=0.3,
                            alpha=0.05,
                            power=0.8,
-                           maxthetaF=0.1,
+                           minstop=8,
                            minthetaE=0.9)
-des.jun
-drawDiagram(des.jun)
+n14
+drawDiagram(n14)
+
+n15 <- singlearmDesign(nmin=15,
+                       nmax=15,
+                       C=3,
+                       p0=0.05,
+                       p1=0.3,
+                       alpha=0.05,
+                       power=0.8,
+                       minstop=5,
+                       minthetaE=0.9)
+
+n15
+drawDiagram(n15)
+
+n16 <- singlearmDesign(nmin=16,
+                       nmax=16,
+                       C=2,
+                       p0=0.05,
+                       p1=0.3,
+                       alpha=0.05,
+                       power=0.8,
+                       minstop=8,
+                       minthetaE=0.9)
+
+n16
+drawDiagram(n16)
+
+n.all <- singlearmDesign(nmin=14,
+                         nmax=16,
+                         C=2:4,
+                         p0=0.05,
+                         p1=0.3,
+                         alpha=0.05,
+                         power=0.8,
+                         minstop=6,
+                         minthetaE=0.9)
+
+n.all
+drawDiagram(n.all, 3)
+
+curtailment:::findDesignOCs
+# 14: 2: too many stages (7)
+# 15: 3
+# 16: 2/4

@@ -1,0 +1,19 @@
+---
+title: "part2_designs"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{part2_designs}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(pipah)
+```

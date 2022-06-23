@@ -1,0 +1,37 @@
+---
+title: "PIPAH part 2"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PIPAH_part2}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = TRUE,
+  dev='png',
+  fig.path="figures/")
+```
+
+```{r setup, include=F}
+devtools::install_github("martinlaw/curtailment")
+library(curtailment)
+```
+## Simon design ##
+```{r, fig.height=4, fig.width=6, warning=T}
+simon <- find2stageDesigns(nmin=6,
+                           nmax=14,
+                           p0=0.05,
+                           p1=0.3,
+                           alpha=0.05,
+                           power=0.8)
+drawDiagram(simon)
+```
+```{r}
+
+```
+
