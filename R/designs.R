@@ -83,21 +83,21 @@ simon <- find2stageDesigns(nmin=6,
 
 clinfun::ph2simon(pu = 0.05, pa = 0.3, ep1 = 0.05, ep2 = 0.2, nmax = 30)
 
-n14 <- singlearmDesign(nmin=14,
+n14.stop10 <- singlearmDesign(nmin=14,
                            nmax=14,
                            C=2,
                            p0=0.05,
                            p1=0.3,
                            alpha=0.05,
                            power=0.8,
-                           minstop=8,
+                           minstop=10,
                            minthetaE=0.9)
 n14
-drawDiagram(n14)
+drawDiagram(n14.stop10)
 
 n15 <- singlearmDesign(nmin=15,
                        nmax=15,
-                       C=3,
+                       C=5,
                        p0=0.05,
                        p1=0.3,
                        alpha=0.05,
@@ -138,3 +138,7 @@ curtailment:::findDesignOCs
 # 14: 2: too many stages (7)
 # 15: 3
 # 16: 2/4
+
+library(knitr)
+library(rmarkdown)
+render("vignettes/PIPAH_part2.Rmd", html_document(pandoc_args = "--self-contained"))
