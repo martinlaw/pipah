@@ -64,8 +64,8 @@ n15 <- singlearmDesign(nmin=15,
 ```
 
 
-```{r, fig.height=4, fig.width=6, warning=T, echo=F}
-drawDiagram(simon)$diagram
+```{r simon.xmax34, fig.height=4, fig.width=6, warning=T, echo=F}
+drawDiagram(simon, xmax=34, ymax=34)$diagram
 
 ```
 
@@ -75,16 +75,16 @@ These designs have stochastic curtailment for futility and non-stochastic curtai
 
 
 
-```{r, fig.height=4, fig.width=6, warning=T, echo=F}
-drawDiagram(n14)$diagram
+```{r n14.4.xmax34, fig.height=4, fig.width=6, warning=T, echo=F}
+drawDiagram(n14, xmax=34, ymax=34)$diagram
 ```
 
-```{r, fig.height=4, fig.width=6, warning=T, echo=F}
-drawDiagram(n14.stop10)$diagram
+```{r n14.3.xmax34, fig.height=4, fig.width=6, warning=T, echo=F}
+drawDiagram(n14.stop10, xmax=34, ymax=34)$diagram
 ```
 
-```{r, fig.height=4, fig.width=6, warning=T, echo=F}
-drawDiagram(n15)$diagram
+```{r n15.xmax34, fig.height=4, fig.width=6, warning=T, echo=F}
+drawDiagram(n15, xmax=34, ymax=34)$diagram
 
 ```
 
