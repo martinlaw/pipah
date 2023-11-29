@@ -121,9 +121,9 @@ n16 <- singlearmDesign(nmin=16,
 n16
 drawDiagram(n16)
 
-n.all <- singlearmDesign(nmin=14,
+n.all <- curtailment::singlearmDesign(nmin=14,
                          nmax=16,
-                         C=2:4,
+                         C=4,
                          p0=0.05,
                          p1=0.3,
                          alpha=0.05,
@@ -132,7 +132,7 @@ n.all <- singlearmDesign(nmin=14,
                          minthetaE=0.9)
 
 n.all
-drawDiagram(n.all, 3)
+drawDiagram(n.all)
 
 curtailment:::findDesignOCs
 # 14: 2: too many stages (7)
@@ -152,17 +152,7 @@ x <- 3:7
 n <- 7
 sum(choose(n=n, k=x) * p^x * q^(n-x))
 
-des.block2 <- curtailment::twoarmDesign(nmin.arm=5, nmax.arm=30, block.size=2, minstop=8, pc=0.05, pt=0.3, alpha=0.05, power=0.8, fast.method=T)
+#des.block2 <- curtailment::twoarmDesign(nmin.arm=5, nmax.arm=30, block.size=2, minstop=8, pc=0.05, pt=0.3, alpha=0.05, power=0.8, fast.method=T)
 des.block4 <- curtailment::twoarmDesign(nmin.arm=8, nmax.arm=24, block.size=4, minstop=8, pc=0.05, pt=0.3, alpha=0.05, power=0.8, fast.method=T)
 
 curtailment::drawDiagram(des.block4, 1)
-
-n14.stop10 <- singlearmDesign(nmin=14,
-                              nmax=14,
-                              C=2,
-                              p0=0.05,
-                              p1=0.3,
-                              alpha=0.05,
-                              power=0.8,
-                              minstop=10,
-                              minthetaE=0.9)
