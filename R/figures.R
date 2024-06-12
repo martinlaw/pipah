@@ -16,3 +16,4 @@ ggplot(data=dat, mapping=aes(x=Patient, y=`Dose Level (mg)`, col=Toxicity, shape
   theme(panel.grid.minor = element_blank(), panel.grid.major=element_blank())
 
 #ggsave(filename="fig1.png", device="png", dpi=300, bg="white")
+ggsave(filename="fig1.pdf", device="pdf", dpi=300, bg="white", width = 10*0.75, height = 6*0.75)
